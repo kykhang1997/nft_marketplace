@@ -44,7 +44,7 @@ contract NFTMarket is ERC721URIStorage, Ownable {
         uint256 currentID = _tokenIDs.current();
         _safeMint(msg.sender, currentID);
         _setTokenURI(currentID, tokenURI);
-        emit NFTTransfer(currentID, address(this), msg.sender, tokenURI, 0);
+        emit NFTTransfer(currentID, address(0), msg.sender, tokenURI, 0);
     }
 
     //listNFT
